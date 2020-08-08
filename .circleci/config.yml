@@ -10,7 +10,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: alpine:node
+      - image: node:alpine
     environment:
       FOO: bar
     steps:
