@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: echo $DOCKER_CONFIG_B64 | base64 -d > ~/.docker/config.json
+      - run: mkdir -p ~/.docker && echo $DOCKER_CONFIG_B64 | base64 -d > ~/.docker/config.json
       - run:
           name: Install Docker client
           command: apk add docker-cli
