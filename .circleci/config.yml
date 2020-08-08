@@ -20,5 +20,5 @@ jobs:
       - run:
           name: Install Docker client
           command: apk add docker-cli
-      - run: docker build -t registry.digitalocean.com/form2role-bot
+      - run: docker build -t registry.digitalocean.com/form2role-bot .
       - run: docker push registry.digitalocean.com/form2role-bot
